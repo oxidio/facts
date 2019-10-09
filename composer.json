@@ -1,5 +1,13 @@
 {
-    "name": "oxid-esales/oxideshop-facts",
+    "name": "oxidio/facts",
+    "replace": {
+        "oxid-esales/oxideshop-facts": "self.version"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-oxidio-master": "2.x-dev"
+        }
+    },
     "description": "OXID eShop facts",
     "license": "GPL-3.0-only",
     "require": {
