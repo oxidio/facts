@@ -38,9 +38,14 @@ class Facts
     const COMPOSER_VENDOR_OXID_ESALES = 'oxid-esales';
 
     /**
+     * @var string
+     */
+    const COMPOSER_VENDOR_OXIDIO = 'oxidio';
+
+    /**
      * @var string The composer package name of the OXID eShop Community Edition.
      */
-    const COMPOSER_PACKAGE_OXIDESHOP_CE = 'oxideshop-ce';
+    const COMPOSER_PACKAGE_OXIDESHOP_CE = 'shop';
 
     /**
      * @var string The composer package name of the OXID eShop Professional Edition.
@@ -117,7 +122,7 @@ class Facts
         $vendorPath = $this->getVendorPath();
 
         if ($this->isProjectEshopInstallation()) {
-            $communityEditionSourcePath = Path::join($vendorPath, self::COMPOSER_VENDOR_OXID_ESALES, self::COMPOSER_PACKAGE_OXIDESHOP_CE, 'source');
+            $communityEditionSourcePath = Path::join($vendorPath, self::COMPOSER_VENDOR_OXIDIO, self::COMPOSER_PACKAGE_OXIDESHOP_CE, 'source');
         } else {
             $communityEditionSourcePath = $this->getSourcePath();
         }
@@ -303,7 +308,7 @@ class Facts
      */
     private function isProjectEshopInstallation()
     {
-        $vendorCommunityEditionPath = Path::join($this->getVendorPath(), self::COMPOSER_VENDOR_OXID_ESALES, self::COMPOSER_PACKAGE_OXIDESHOP_CE);
+        $vendorCommunityEditionPath = Path::join($this->getVendorPath(), self::COMPOSER_VENDOR_OXIDIO, self::COMPOSER_PACKAGE_OXIDESHOP_CE);
 
         return is_dir($vendorCommunityEditionPath);
     }
