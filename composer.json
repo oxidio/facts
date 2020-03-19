@@ -5,7 +5,8 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-oxidio-master": "2.x-dev"
+            "dev-oxidio-1.x": "2.x-dev",
+            "dev-oxidio-master": "3.x-dev"
         }
     },
     "description": "OXID eShop facts",
